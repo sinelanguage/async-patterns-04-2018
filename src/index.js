@@ -1,8 +1,8 @@
 import './style/style.css';
 import simplePromiseExample from './promises';
-import asyncAwaitExample from './async-await';
+import asyncAwaitExample, { num } from './async-await';
 
-simplePromiseExample()
+simplePromiseExample(num)
   .then(val => console.log('Value: ', val))
   .catch(err => console.error('Error: ', err.message));
 
