@@ -8,9 +8,11 @@
 1.  `npm install`
 2.  `npm start:dev`
 
-## Async Await
+## Examples
 
 ```
+// Async Await Example
+
 const asyncAwaitExample = async () => {
   try {
     console.log('calling');
@@ -26,4 +28,15 @@ const asyncAwaitExample = async () => {
     console.error('Catch error: ', error);
   }
 };
+
+// Simple Promise example
+
+const simplePromiseExample = num =>
+  new Promise((res, rej) => {
+    if (num !== 5) {
+      // eslint prefers you throw an error.
+      rej(new Error('Rejected: ! Not equal to 5'));
+    }
+    setTimeout(() => res(10), 2000);
+  });
 ```
