@@ -1,12 +1,12 @@
 import './style/style.css';
 import simplePromiseExample from './promises';
-// uses style-loader and adds style tag to the top of the index.html because we
-// are using a url import style from "./style/style.css"; uses style-loader and
-// inlines the style
+import asyncAwaitExample from './async-await';
 
-simplePromiseExample
+simplePromiseExample()
   .then(val => console.log('Value: ', val))
-  .catch(err => console.log('Error: ', err.message));
+  .catch(err => console.error('Error: ', err.message));
+
+asyncAwaitExample().then(val => console.log('Value Array: ', val));
 
 function foo() {
   const element = document.createElement('h1');
